@@ -17,13 +17,19 @@ public class Book {
     private String title;
     private String author;
     private String category;
+
+    @Column(name = "book_condition")  // avoid reserved keyword
     private String condition; // e.g. "good", "fair", "new"
+
+    @Column(name = "book_type")       // avoid reserved keyword
     private String type;      // "buy" or "borrow"
+
     private String price;
 
     private String owner;
     private String ownerEmail;
     private String ownerPhone;
 
+    @Column(name = "image_url")       // ensure clean naming
     private String imageURL; // stored path/URL for the uploaded file
 }
